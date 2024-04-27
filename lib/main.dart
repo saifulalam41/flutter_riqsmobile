@@ -91,9 +91,42 @@ class FirstScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       child: Container(
-            child: Text('It is a contact tab, which is responsible for displaying the contacts stored in your mobile',
-              style: TextStyle(fontSize: 32.0),
-            )
+        child: Column(
+          children: [
+            TextField(
+              decoration: InputDecoration(
+                hintText: 'Search...',
+                border: OutlineInputBorder(),
+              ),
+            ),
+            SizedBox(height: 8.0), // Add some spacing
+            Expanded(
+              child: ListView.builder(
+                itemCount: 50,
+                itemBuilder: (context, index) {
+                  return const Column(
+                    children: <Widget>[
+                      ListTile(
+                        leading: CircleAvatar(
+                          backgroundImage: NetworkImage("https://images.pexels.com/photos/213780/pexels-photo-213780.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"),
+                        ),
+                        title: Text('Day planning.pdf'),
+                        subtitle: Text('Power user'),
+                      ),
+                      Divider(
+                        color: Colors.grey,
+                        thickness: 1.0,
+                        indent: 10.0,
+                        endIndent: 10.0,
+                      ),
+                    ],
+
+                  );
+                },
+              ),
+            ),
+          ],
+        ),
 
       ),
     );
