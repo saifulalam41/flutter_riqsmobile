@@ -93,7 +93,7 @@ class FirstScreen extends StatelessWidget {
       child: Container(
         child: Column(
           children: [
-            TextField(
+            const TextField(
               decoration: InputDecoration(
                 hintText: 'Search...',
                 border: OutlineInputBorder(),
@@ -101,28 +101,38 @@ class FirstScreen extends StatelessWidget {
             ),
             SizedBox(height: 8.0), // Add some spacing
             Expanded(
-              child: ListView.builder(
-                itemCount: 50,
-                itemBuilder: (context, index) {
-                  return const Column(
-                    children: <Widget>[
-                      ListTile(
-                        leading: CircleAvatar(
-                          backgroundImage: NetworkImage("https://images.pexels.com/photos/213780/pexels-photo-213780.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"),
+              child: Container(
+                height: 300.0,
+                child: ListView.builder(
+                  itemCount: 50,
+                  itemBuilder: (context, index) {
+                    return const Column(
+                      children: <Widget>[
+                        ListTile(
+                          leading: CircleAvatar(
+                            backgroundImage: NetworkImage("https://images.pexels.com/photos/213780/pexels-photo-213780.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"),
+                          ),
+                          title: Text('Day planning.pdf'),
+                          subtitle: Text('Power user'),
+                          trailing: Wrap(
+                            spacing: 12, // space between two icons
+                            children: <Widget>[
+                              Icon(Icons.more_vert), // icon-2
+                            ],
+                          ),
                         ),
-                        title: Text('Day planning.pdf'),
-                        subtitle: Text('Power user'),
-                      ),
-                      Divider(
-                        color: Colors.grey,
-                        thickness: 1.0,
-                        indent: 10.0,
-                        endIndent: 10.0,
-                      ),
-                    ],
+                        Divider(
+                          color: Colors.grey,
+                          thickness: 1.0,
+                          indent: 10.0,
+                          endIndent: 10.0,
+                        ),
 
-                  );
-                },
+                      ],
+
+                    );
+                  },
+                ),
               ),
             ),
           ],
