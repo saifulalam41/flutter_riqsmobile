@@ -32,6 +32,7 @@ class MyApp extends StatelessWidget{
           child: DefaultTabController(
             length: 2,
             child: Scaffold(
+
               appBar: AppBar(
                 title: Text("Library"),
                 centerTitle: false,
@@ -44,6 +45,20 @@ class MyApp extends StatelessWidget{
                 ),
 
                 bottom: const TabBar(
+                  // indicator: BoxDecoration(
+                  //     color: Colors.white,
+                  //    ),
+                  labelStyle:TextStyle(
+                      fontWeight: FontWeight.w700,
+                      fontSize: 14,
+                      color:  Colors.white
+                  ),
+                  unselectedLabelStyle:
+                  TextStyle(
+                      fontWeight: FontWeight.w700,
+                      fontSize: 14,
+                      color:  Colors.black
+                  ),
                   indicatorSize: TabBarIndicatorSize.tab,
                   indicatorWeight: 3,
                   indicatorColor: Color.fromARGB(255, 20, 94, 74),
