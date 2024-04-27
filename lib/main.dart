@@ -70,8 +70,8 @@ class MyApp extends StatelessWidget{
               ),
               body: const TabBarView(
                 children: [
-                  Icon(Icons.directions_car),
-                  Icon(Icons.directions_transit),
+                  FirstScreen(),
+                  SecondScreen(),
                 ],
               ),
 
@@ -84,3 +84,30 @@ class MyApp extends StatelessWidget{
     );
   }
 }
+
+class FirstScreen extends StatelessWidget {
+  const FirstScreen({super.key});
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      child: Container(
+            child: Text('It is a contact tab, which is responsible for displaying the contacts stored in your mobile',
+              style: TextStyle(fontSize: 32.0),
+            )
+
+      ),
+    );
+  }
+}
+class SecondScreen extends StatelessWidget {
+  const SecondScreen({super.key});
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+        child: Text('It is a second layout tab, which is responsible for taking pictures from your mobile.',
+          style: TextStyle(fontSize: 35.0),
+        ),
+    );
+  }
+}
+
