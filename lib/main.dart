@@ -71,7 +71,7 @@ class MyApp extends StatelessWidget{
               body: const TabBarView(
                 children: [
                   FirstScreen(),
-                  SecondScreen(),
+                  FirstScreen(),
                 ],
               ),
 
@@ -89,7 +89,8 @@ class FirstScreen extends StatelessWidget {
   const FirstScreen({super.key});
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return Padding(
+      padding: EdgeInsets.only(top: 16.0,left: 6,right: 6),
       child: Container(
         child: Column(
           children: [
@@ -97,7 +98,12 @@ class FirstScreen extends StatelessWidget {
               decoration: InputDecoration(
                 hintText: 'Search...',
                 border: OutlineInputBorder(),
+                suffixIcon: Icon(Icons.filter), // Icon after the input text
               ),
+              // decoration: InputDecoration(
+              //   hintText: 'Search...',
+              //   border: OutlineInputBorder(),
+              // ),
             ),
             SizedBox(height: 8.0), // Add some spacing
             Expanded(
