@@ -11,7 +11,18 @@ class MyApp extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
     return  MaterialApp(
-        theme: ThemeData(primarySwatch: Colors.blue),
+        theme: ThemeData(
+            primarySwatch: Colors.blue,
+            tabBarTheme: const TabBarTheme(
+
+                labelColor: Colors.white,
+                labelStyle: TextStyle(color: Colors.white), // color for text
+                // indicator: UnderlineTabIndicator( // color for indicator (underline)
+                //     borderSide: BorderSide(color: Colors.grey),)
+            ),
+            primaryColor: Colors.pink[800], // outdated and has no effect to Tabbar
+
+        ),
         darkTheme: ThemeData(primarySwatch: Colors.amber),
         color: Colors.blue,
         debugShowCheckedModeBanner: false,
@@ -48,9 +59,9 @@ class MyApp extends StatelessWidget{
                   Icon(Icons.directions_transit),
                 ],
               ),
-            
-            
-            
+
+
+
             ),
           ),
         )
