@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'bottom_drawer.dart';
 
 main(){
   runApp(const MyApp());
@@ -143,11 +144,7 @@ class FirstScreen extends StatelessWidget {
                                         //     Navigator.pop(context);
                                         //   },
                                         // ),
-                                        child: Container(
-                                          child: Text(' mobile.',
-                                            style: TextStyle(fontSize: 35.0),
-                                          ),
-                                        ),
+                                        child: BottomDrawer()
                                       );
                                     },);
                               },
