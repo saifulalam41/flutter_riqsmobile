@@ -112,7 +112,7 @@ class FirstScreen extends StatelessWidget {
                 child: ListView.builder(
                   itemCount: 50,
                   itemBuilder: (context, index) {
-                    return const Column(
+                    return Column(
                       children: <Widget>[
                         ListTile(
                           leading: CircleAvatar(
@@ -120,11 +120,38 @@ class FirstScreen extends StatelessWidget {
                           ),
                           title: Text('Day planning.pdf'),
                           subtitle: Text('Power user'),
-                          trailing: Wrap(
-                            spacing: 12, // space between two icons
-                            children: <Widget>[
-                              Icon(Icons.more_vert), // icon-2
-                            ],
+                          // trailing: Wrap(
+                          //   spacing: 12, // space between two icons
+                          //   children: <Widget>[
+                          //     Icon(Icons.more_vert), // icon-2
+                          //   ],
+                          // ),
+                          trailing: Padding(
+                            padding: EdgeInsets.only(left: 12),
+                            child: IconButton(
+                              icon: Icon(Icons.more_vert),
+                              onPressed: () {
+                                showModalBottomSheet(
+                                    context: context,
+                                    builder: (BuildContext context) {
+                                      return SizedBox(
+                                        height: 700,
+                                        width: MediaQuery.of(context).size.width,
+                                        // child: ElevatedButton(
+                                        //   child: const Text('Close'),
+                                        //   onPressed: (){
+                                        //     Navigator.pop(context);
+                                        //   },
+                                        // ),
+                                        child: Container(
+                                          child: Text(' mobile.',
+                                            style: TextStyle(fontSize: 35.0),
+                                          ),
+                                        ),
+                                      );
+                                    },);
+                              },
+                            ),
                           ),
                         ),
                         Divider(
