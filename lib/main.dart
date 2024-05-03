@@ -99,7 +99,7 @@ class FirstScreen extends StatelessWidget {
               decoration: InputDecoration(
                 hintText: 'Search...',
                 border: OutlineInputBorder(),
-                suffixIcon: Icon(Icons.filter), // Icon after the input text
+                suffixIcon: Icon(Icons.filter_list), // Icon after the input text
               ),
               // decoration: InputDecoration(
               //   hintText: 'Search...',
