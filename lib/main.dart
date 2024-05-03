@@ -1,6 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'bottom_drawer.dart';
+import 'my_drawer_header.dart';
+import 'library_filter.dart';
 
 main(){
   runApp(const MyApp());
@@ -41,6 +43,7 @@ class MyApp extends StatelessWidget{
                 leading: IconButton(
                   icon: Icon(Icons.menu),
                   onPressed: () {
+                    MyHeaderDrawer();
                     // Add your onPressed logic here
                   },
                 ),
@@ -90,16 +93,52 @@ class FirstScreen extends StatelessWidget {
   const FirstScreen({super.key});
   @override
   Widget build(BuildContext context) {
+    final screenHeight = MediaQuery.of(context).size.height;
+    final screenWidth = MediaQuery.of(context).size.width;
+    final height60percent = screenHeight * 0.6;
+    final width90percent = screenWidth * 0.9;
     return Padding(
       padding: EdgeInsets.only(top: 16.0,left: 6,right: 6),
       child: Container(
         child: Column(
           children: [
-            const TextField(
+             TextField(
               decoration: InputDecoration(
                 hintText: 'Search...',
                 border: OutlineInputBorder(),
-                suffixIcon: Icon(Icons.filter_list), // Icon after the input text
+                // suffixIcon: Icon(Icons.filter_list),
+                suffixIcon: IconButton(
+                  icon: Icon(Icons.filter_list),
+                  onPressed: () {
+                    showDialog(
+                        context: context,
+                        builder: (BuildContext context) {
+                          return Dialog(
+
+                            shape: RoundedRectangleBorder(
+                                borderRadius:
+                                BorderRadius.circular(20.0)), //this right here
+                            child: Container(
+                              height: height60percent,
+                              width: width90percent,
+                              child: Padding(
+                                padding: const EdgeInsets.all(12.0),
+                                child: Column(
+                                  mainAxisAlignment: MainAxisAlignment.start,
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    LibraryFilter()
+
+                                  ],
+                                ),
+                              ),
+                            ),
+                          );
+                        });
+                    // Add your onPressed logic here
+                  },
+                ),
+
               ),
               // decoration: InputDecoration(
               //   hintText: 'Search...',
