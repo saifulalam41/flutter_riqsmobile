@@ -37,11 +37,11 @@ class MyApp extends StatelessWidget{
             child: Scaffold(
               resizeToAvoidBottomInset : false,
               appBar: AppBar(
-                title: Text("Library"),
+                title: Text("Library",style: TextStyle(color: Colors.white),),
                 centerTitle: false,
                 backgroundColor: Color.fromARGB(255, 20, 94, 74),
                 leading: IconButton(
-                  icon: Icon(Icons.menu),
+                  icon: Icon(Icons.menu,color: Colors.white,),
                   onPressed: () {
                     MyHeaderDrawer();
                     // Add your onPressed logic here
