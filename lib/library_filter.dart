@@ -120,6 +120,48 @@ class _LibraryFilter extends State<LibraryFilter> {
                 // ),
               ),
             ),
+            Container(
+              margin: EdgeInsets.only(top: 30.0),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.end,
+                children: <Widget>[
+                  ElevatedButton(
+                    onPressed: () {
+                      Navigator.of(context).pop();
+                      // Add cancel button logic here
+                    },
+                    style: ElevatedButton.styleFrom(
+                      // primary: Colors.red, // Background color
+                      // onPrimary: Colors.white, // Text color
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(5.0), // Set the border radius
+                      ),
+                    ),
+                    child: Text('CANCEL'),
+                  ),
+                  SizedBox(width: 12.0),
+                  SizedBox(
+                    // width: 50,
+                    child: ElevatedButton(
+                      onPressed: () {
+                        Navigator.of(context).pop();
+                        // Add save button logic here
+                      },
+
+                      style: ElevatedButton.styleFrom(
+                          backgroundColor: Color.fromARGB(255, 20, 94, 74),
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(10.0), // Set the border radius
+                        ),
+                        // primary: Colors.green, // Background color
+                        // onPrimary: Colors.white, // Text color
+                      ),
+                      child: Text('APPLY', style: TextStyle(fontWeight: FontWeight.w500,color: Colors.white,fontSize: 16,letterSpacing: 0.8)),
+                    ),
+                  ),
+                ],
+              ),
+            ),
 
           ],
         ),

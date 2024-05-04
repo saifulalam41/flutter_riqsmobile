@@ -35,7 +35,7 @@ class MyApp extends StatelessWidget{
           child: DefaultTabController(
             length: 2,
             child: Scaffold(
-
+              resizeToAvoidBottomInset : false,
               appBar: AppBar(
                 title: Text("Library"),
                 centerTitle: false,
@@ -119,7 +119,7 @@ class FirstScreen extends StatelessWidget {
                                 borderRadius:
                                 BorderRadius.circular(20.0)), //this right here
                             child: Container(
-                              height: height60percent,
+                              height: 480,
                               width: width90percent,
                               child: Padding(
                                 padding: const EdgeInsets.all(12.0),
