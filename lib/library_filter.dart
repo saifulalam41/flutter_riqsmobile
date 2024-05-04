@@ -65,8 +65,20 @@ class _LibraryFilter extends State<LibraryFilter> {
                           fontWeight: FontWeight.w500,
                           fontSize: 16,
                           letterSpacing: 0.8)),
-                  Icon(Icons.calendar_month,
-                      color: const Color.fromARGB(255, 20, 94, 74)),
+                  GestureDetector(
+                    onTap: () {
+                     getDate();
+                    },
+                    child: Icon(Icons.calendar_month,
+                        color: const Color.fromARGB(255, 20, 94, 74)),
+                  ),
+                  // IconButton(
+                  //   iconSize: 24,
+                  //   icon: Icon(Icons.calendar_month, color: Color.fromARGB(255, 20, 94, 74)),
+                  //   onPressed: () {
+                  //     getDate();
+                  //   },
+                  // ),
                 ],
               ),
             ),
@@ -88,8 +100,20 @@ class _LibraryFilter extends State<LibraryFilter> {
                           fontWeight: FontWeight.w500,
                           fontSize: 16,
                           letterSpacing: 0.8)),
-                  Icon(Icons.calendar_month,
-                      color: const Color.fromARGB(255, 20, 94, 74)),
+                  GestureDetector(
+                    onTap: () {
+                      getDate();
+                    },
+                    child: Icon(Icons.calendar_month,
+                        color: const Color.fromARGB(255, 20, 94, 74)),
+                  ),
+                  // IconButton(
+                  //   iconSize: 24,
+                  //   icon: Icon(Icons.calendar_month, color: Color.fromARGB(255, 20, 94, 74)),
+                  //   onPressed: () {
+                  //     getDate();
+                  //   },
+                  // ),
                 ],
               ),
             ),
