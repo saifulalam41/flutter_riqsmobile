@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 
 class LibraryFilter extends StatefulWidget {
   const LibraryFilter({super.key});
@@ -100,46 +101,26 @@ class _LibraryFilter extends State<LibraryFilter> {
             ),
             Container(
               margin: EdgeInsets.only(top: 20.0),
-              padding:const EdgeInsets.all(14) ,
-              decoration: BoxDecoration(
-                border: Border.all(
-                  color: const Color.fromARGB(255, 200, 200, 200),
-                  width: 1.0,
+              child: TextField(
+                decoration: InputDecoration(
+                  hintText: 'Version',
+                  contentPadding: EdgeInsets.symmetric(vertical: 14.0, horizontal: 14),
+                  border: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(5.0),
+                    borderSide: BorderSide(
+                      color: const Color.fromARGB(255, 200, 200, 200), // Border color
+                      width: 1.0,        // Border width
+                    ),
+                  ),
+
                 ),
-
-
-                borderRadius: BorderRadius.circular(5.0),
-              ),
-
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: <Widget>[
-                  Text('Version', style: TextStyle(fontWeight: FontWeight.w500,fontSize: 16,letterSpacing: 0.8)),
-                  Icon(Icons.calendar_month, color: const Color.fromARGB(255, 20, 94, 74)),
-                ],
+                // decoration: InputDecoration(
+                //   hintText: 'Search...',
+                //   border: OutlineInputBorder(),
+                // ),
               ),
             ),
-            Container(
-              margin: EdgeInsets.only(top: 20.0),
-              padding:const EdgeInsets.all(14) ,
-              decoration: BoxDecoration(
-                border: Border.all(
-                  color: const Color.fromARGB(255, 200, 200, 200),
-                  width: 1.0,
-                ),
 
-
-                borderRadius: BorderRadius.circular(5.0),
-              ),
-
-              child: Row(
-                children: <Widget>[
-                  Icon(Icons.dock_outlined, color: const Color.fromARGB(255, 20, 94, 74)),
-                  SizedBox(width: 8), // Add some space between the icon and text
-                  Text('Form Response', style: TextStyle(fontWeight: FontWeight.w600,fontSize: 16,letterSpacing: 0.8)),
-                ],
-              ),
-            ),
           ],
         ),
 
