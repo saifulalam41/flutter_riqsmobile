@@ -70,10 +70,10 @@ class _LibraryFilter extends State<LibraryFilter> {
               ),
 
               child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: <Widget>[
-                  Icon(Icons.download, color: const Color.fromARGB(255, 20, 94, 74)),
-                  SizedBox(width: 8), // Add some space between the icon and text
-                  Text('Download File', style: TextStyle(fontWeight: FontWeight.w600,fontSize: 16,letterSpacing: 0.8)),
+                  Text('Select a date', style: TextStyle(fontWeight: FontWeight.w500,fontSize: 16,letterSpacing: 0.8)),
+                  Icon(Icons.calendar_month, color: const Color.fromARGB(255, 20, 94, 74)),
                 ],
               ),
             ),
@@ -91,10 +91,10 @@ class _LibraryFilter extends State<LibraryFilter> {
               ),
 
               child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: <Widget>[
-                  Icon(Icons.edit, color: const Color.fromARGB(255, 20, 94, 74)),
-                  SizedBox(width: 8), // Add some space between the icon and text
-                  Text('Fill Form', style: TextStyle(fontWeight: FontWeight.w600,fontSize: 16,letterSpacing: 0.8)),
+                  Text('Assigned To', style: TextStyle(fontWeight: FontWeight.w500,color: const Color.fromARGB(255, 0,0,0),fontSize: 16,letterSpacing: 0.8)),
+                  Icon(Icons.expand_more, color: const Color.fromARGB(255, 20, 94, 74)),
                 ],
               ),
             ),
@@ -112,10 +112,10 @@ class _LibraryFilter extends State<LibraryFilter> {
               ),
 
               child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: <Widget>[
-                  Icon(Icons.remove, color: const Color.fromARGB(255, 20, 94, 74)),
-                  SizedBox(width: 8), // Add some space between the icon and text
-                  Text('Remove', style: TextStyle(fontWeight: FontWeight.w600,fontSize: 16,letterSpacing: 0.8)),
+                  Text('Version', style: TextStyle(fontWeight: FontWeight.w500,fontSize: 16,letterSpacing: 0.8)),
+                  Icon(Icons.calendar_month, color: const Color.fromARGB(255, 20, 94, 74)),
                 ],
               ),
             ),
