@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'library_view_detail.dart';
 
 class BottomDrawer extends StatefulWidget {
   @override
@@ -40,12 +41,21 @@ class _BottomDrawerState extends State<BottomDrawer> {
                   borderRadius: BorderRadius.circular(5.0),
                 ),
 
-              child: Row(
-                children: <Widget>[
-                  Icon(Icons.remove_red_eye, color: const Color.fromARGB(255, 20, 94, 74)),
-                  SizedBox(width: 8), // Add some space between the icon and text
-                  Text('View Details', style: TextStyle(fontWeight: FontWeight.w600,fontSize: 16,letterSpacing: 0.8)),
-                ],
+              child: GestureDetector(
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    CupertinoPageRoute(builder: (context) => const ViewDetail()),
+                  );
+                },
+                child: Row(
+                  children: <Widget>[
+                    Icon(Icons.remove_red_eye, color: const Color.fromARGB(255, 20, 94, 74)),
+                    SizedBox(width: 8), // Add some space between the icon and text
+                    Text('View Details', style: TextStyle(fontWeight: FontWeight.w600,fontSize: 16,letterSpacing: 0.8)),
+                  ],
+                
+                ),
               ),
             ),
             Container(
@@ -136,6 +146,40 @@ class _BottomDrawerState extends State<BottomDrawer> {
         ),
 
 
+      ),
+    );
+  }
+}
+class ViewDetail extends StatelessWidget {
+  const ViewDetail({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return CupertinoPageScaffold(
+      navigationBar: CupertinoNavigationBar(
+        backgroundColor: Color.fromARGB(255, 20, 94, 74),
+        leading: GestureDetector(
+          onTap: () {
+            Navigator.of(context).pop();
+          },
+          child: Icon(
+            CupertinoIcons.back,
+            color: Colors.white, // Change the color here
+          ),
+        ),
+        middle: Row(
+          mainAxisAlignment: MainAxisAlignment.start,
+          children: <Widget>[
+            Text(
+              'Employee.pdf',
+
+              style: TextStyle(color: Colors.white,),
+            ),
+          ],
+        ),
+      ),
+      child: Container(
+        child: LibraryViewDetail()
       ),
     );
   }
