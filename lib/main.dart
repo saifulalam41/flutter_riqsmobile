@@ -159,7 +159,7 @@ class FirstScreen extends StatelessWidget {
                             backgroundImage: NetworkImage("https://images.pexels.com/photos/213780/pexels-photo-213780.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"),
                           ),
                           title: Text('Day planning.pdf'),
-                          subtitle: Text('Power user'),
+                          subtitle: Text('Power user  .  13 May 2023'),
                           // trailing: Wrap(
                           //   spacing: 12, // space between two icons
                           //   children: <Widget>[

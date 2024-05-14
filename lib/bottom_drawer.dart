@@ -155,31 +155,36 @@ class ViewDetail extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return CupertinoPageScaffold(
-      navigationBar: CupertinoNavigationBar(
-        backgroundColor: Color.fromARGB(255, 20, 94, 74),
-        leading: GestureDetector(
-          onTap: () {
-            Navigator.of(context).pop();
-          },
-          child: Icon(
-            CupertinoIcons.back,
-            color: Colors.white, // Change the color here
+    return CupertinoApp(
+      home: CupertinoPageScaffold(
+        child: SafeArea(
+          child: Center(
+            child: LibraryViewDetail(),
           ),
         ),
-        middle: Row(
-          mainAxisAlignment: MainAxisAlignment.start,
-          children: <Widget>[
-            Text(
-              'Employee.pdf',
+        navigationBar: CupertinoNavigationBar(
+          backgroundColor: Color.fromARGB(255, 20, 94, 74),
+              leading: GestureDetector(
+                onTap: () {
+                  Navigator.of(context).pop();
+                },
+                child: Icon(
+                  CupertinoIcons.back,
+                  color: Colors.white, // Change the color here
+                ),
+              ),
+              middle: Row(
+                mainAxisAlignment: MainAxisAlignment.start,
+                children: <Widget>[
+                  Text(
+                    'Employee.pdf',
 
-              style: TextStyle(color: Colors.white,),
-            ),
-          ],
+                    style: TextStyle(color: Colors.white,),
+                  ),
+                ],
+              ),
+
         ),
-      ),
-      child: Container(
-        child: LibraryViewDetail()
       ),
     );
   }
